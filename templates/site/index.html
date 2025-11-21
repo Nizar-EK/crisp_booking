@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Forside{% endblock %}
+
+{% block content %}
+
+
+<section class="main">
+  <div class="container-fluid py-5">
+    <div class="row py-4 justify-content-center">
+      <div class="col-lg-7 pt-5 text-center">
+        <h1>Next level Fried Chicken</h1>
+        <a href="{{ url_for('booking_index') }}">
+          <button class="btn1 mt-3">Book bord</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE ICONS -->
+<section class="new">
+  <div class="container mt-5">
+    <div class="row text-center">
+      <div class="col-4 icon-box">
+        <div class="icon-circle">
+          <img src="{{ url_for('static', filename='img/bestilnu.png') }}" alt="picture of fast food order">
+          <h6>Bestil nu</h6>
+        </div>
+      </div>
+      <div class="col-4 icon-box">
+        <div class="icon-circle">
+          <img src="{{ url_for('static', filename='img/booking.png') }}" alt="picture of booking">
+          <h6>Book bord</h6>
+        </div>
+      </div>
+      <div class="col-4 icon-box">
+        <div class="icon-circle">
+          <img src="{{ url_for('static', filename='img/hamburger.png') }}" alt="picture of burger">
+          <h6>Se menukort</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Kontakt py-5">
+  <div class="contact-container">
+    
+    <!-- Contact Info -->
+    <div class="row">
+      <div class="col-12 col-lg-6 px-lg-5 ps-lg-0">
+        <div class="contact-box">
+          <h1>Kontakt</h1>
+          <h6 style="color:darkorange;">Get Social With Crisp</h6>
+          <h6>EMAIL</h6>
+          <p>INFO@EATCRISP.DK</p>
+          <h6>TELEFON</h6>
+          <p>+45 93 96 24 44</p>
+          <h6>Følg med på @EatCrisp</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+        <h1>Besøg vores skønne restaurant</h1>
+        <div class="map-container mt-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.9927444128175!2d12.559772099999993!3d55.68911390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652537eb54e8e3b%3A0xe6c6885bbb038391!2sCrisp%20N%C3%B8rrebro!5e0!3m2!1sen!2sdk!4v1747921694492!5m2!1sen!2sdk"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="Nyhedsbrev">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9 m-auto text-center">
+        <h1>Tilmeld dig og få nyheder og tilbud fra CRISP direkte i din indbakke</h1>
+        <input type="text" placeholder="Din Email">
+        <button class="btn2 mt-3">Send</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Administrer Borde</h2>
+
+<!-- header & buttons -->
+<div class="top-buttons">
+  <div class="left-buttons">
+    <a href="{{ url_for('admin_table_create') }}">➕ Ny Bord</a>
+    <a href="{{ url_for('admin_bookings') }}">← Tilbage Til Bookinger</a>
+  </div>
+  <a href="{{ url_for('admin_logout') }}">🔒 Log Ud</a>
+</div>
+
+<!-- tables list -->
+<table>
+  <thead>
+    <tr><th>ID</th><th>Kapacitet</th><th>Handlinger</th></tr>
+  </thead>
+    {% for t in tables %}
+    <tr>
+    <td>{{ t.id }}</td>
+    <td>{{ t.capacity }}</td>
+    <td>
+      <a href="{{ url_for('admin_table_edit', id=t.id) }}">
+        <button class="action-btn" title="Rediger ✏️">✏️</button></a>
+        <form action="{{ url_for('admin_table_delete', id=t.id) }}"
+            method="post" style="display:inline">
+          <button class="action-btn" title="Slet 🗑️">🗑️</button>
+        </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</div> 
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Bookinger</h2>
+
+<div class="top-buttons">
+  <!-- left side: New Booking + Manage Tables -->
+  <div class="left-buttons">
+    <a href="{{ url_for('admin_booking_create') }}">➕ Ny Booking</a>
+    <a href="{{ url_for('admin_tables') }}">📋 Administrer Borde</a>
+  </div>
+  <!-- right side: Log Out -->
+  <a href="{{ url_for('admin_logout') }}">🔒 Log Ud</a>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Navn</th>
+      <th>Email</th>
+      <th>Hvornår</th>
+      <th>Antal</th>
+      <th>Kommentar</th>
+      <th>Handlinger</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for b in bookings %}
+    <tr>
+      <td>{{ b.name }}</td>
+      <td>{{ b.email }}</td>
+      <td>{{ b.start_time.strftime('%d-%m-%Y %H:%M') }}</td>
+      <td>{{ b.party_size }}</td>
+      <td>{{ b.comments }}</td>
+      <td>
+        
+        
+        <a href="{{ url_for('admin_booking_edit', id=b['id']) }}">
+          <button class="action-btn" title="Rediger">✏️</button></a>
+          <form action="{{ url_for('admin_booking_delete', id=b['id']) }}" 
+              method="post" style="display:inline">
+            <button class="action-btn" title="Slet">🗑️</button>
+          </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+

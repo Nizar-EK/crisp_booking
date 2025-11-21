@@ -1,0 +1,236 @@
+/* === site-wide styles === */
+body {
+    background-color:rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-size: 2rem;
+    color:darkorange;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar-brand:hover{
+    color:black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color:black;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: black;
+}
+.main{
+    background: url("../img/crisp-frontpage.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position:50% 50%;
+    width: 100%;
+}
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color:darkorange;
+    font-family:"Monoton", sans-serif;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color:aliceblue;
+    color:rgb(20, 19, 18);
+    font-weight: 700;
+    border-radius: 60px;
+}
+.Nyhedsbrev{
+    font-size: 2rem;
+    font-weight: 100;
+}
+.btn2{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color:darkorange;
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+    border-radius: 60px;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 0;       
+  padding-left: 2rem;   
+  padding-right: 2rem;
+}
+@media (max-width: 768px) {
+  .contact-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.contact-box {
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  margin: 0 auto; 
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* admin_tables.html and admin_bookings.html top-button & table styles */
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.top-buttons a {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.4em 0.8em;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.top-buttons a:hover {
+  background-color: #0056b3;
+}
+.left-buttons {
+  display: flex;
+}
+.left-buttons a {
+  margin-right: 0.5rem;
+}
+.action-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  color: #333;
+}
+.action-btn + .action-btn {
+  margin-left: 0.5rem;
+}
+.action-btn:hover {
+  color: #000;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+thead {
+  background-color: #f0f0f0;
+}
+
+/* admin_table_form.html + admin_booking_form.html responsive form container */
+.container {
+  padding: 1rem;
+}
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+.container form input,
+.container form select,
+.container form button,
+.container form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* admin_login.html centering */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.login-box {
+  width: 300px;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.login-box label {
+  display: block;
+  margin-top: 0.5rem;
+}
+.login-box input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+.login-box button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* booking index page responsive form + notes under inputs */
+.booking-container {
+  padding: 1rem;
+}
+@media (min-width: 480px) {
+  .booking-container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+.booking-container form input,
+.booking-container form select,
+.booking-container form button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+.note {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
