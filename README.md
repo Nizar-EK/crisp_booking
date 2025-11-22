@@ -5,6 +5,8 @@ Systemet gør det muligt for brugere at lave bordreservationer, og administrator
 
 Applikationen blev hostet på en **Azure Virtual Machine** med Gunicorn og Nginx som produktionssetup.
 
+Projektet er lavet som en del af mit studie EK.
+
 ---
 
 ## Funktioner
@@ -16,3 +18,4 @@ Applikationen blev hostet på en **Azure Virtual Machine** med Gunicorn og Nginx
 - SQLite database til lagring af reservationer  
 - Flask-template system (Jinja2) til visning af sider  
 - Deployment på Azure VM (Gunicorn + Nginx)
+- E-mailbekræftelser via Flask-mail
